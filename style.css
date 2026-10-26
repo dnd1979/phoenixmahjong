@@ -1,0 +1,144 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --green-dark: #173a32;
+    --green: #24745b;
+    --green-light: #edf4ef;
+    --text: #222222;
+    --white: #ffffff;
+    --border: #dce8df;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 22px 7%;
+}
+
+.brand {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 300px;
+    padding: 65px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--green-dark), var(--green));
+}
+
+.hero h1 {
+    max-width: 800px;
+    margin: 0 0 16px;
+    font-size: clamp(34px, 6vw, 58px);
+    line-height: 1.15;
+}
+
+.hero p {
+    margin: 0;
+    font-size: 19px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 42px 24px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin: 30px 0;
+}
+
+.feature {
+    padding: 22px;
+    background: #f2f6f3;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px #173a3218;
+}
+
+.feature h3 {
+    margin-top: 0;
+    color: var(--green-dark);
+}
+
+.download {
+    margin-top: 38px;
+    padding: 28px;
+    text-align: center;
+    background: var(--green-light);
+    border-radius: 12px;
+}
+
+.download a {
+    display: inline-block;
+    padding: 12px 22px;
+    background: var(--green);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.download a:hover {
+    background: var(--green-dark);
+}
+
+footer {
+    padding: 22px;
+    text-align: center;
+    background: var(--green-dark);
+    color: #e2e9e4;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 18px 20px;
+    }
+
+    main {
+        padding: 30px 18px;
+    }
+
+    .hero {
+        min-height: 250px;
+        padding: 45px 18px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
